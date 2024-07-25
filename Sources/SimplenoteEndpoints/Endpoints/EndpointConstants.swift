@@ -3,7 +3,7 @@ import Foundation
 
 // MARK: - EndpointConstants
 //
-struct EndpointConstants {
+public struct EndpointConstants {
     
     private static var shared: EndpointConstants!
     let engineBaseURL: NSString

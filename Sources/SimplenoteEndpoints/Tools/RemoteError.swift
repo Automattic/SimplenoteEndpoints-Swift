@@ -7,6 +7,12 @@ public struct RemoteError: Error {
     public let statusCode: Int
     public let response: String?
     public let networkError: Error?
+    
+    public init(statusCode: Int, response: String?, networkError: Error?) {
+        self.statusCode = statusCode
+        self.response = response
+        self.networkError = networkError
+    }
 }
 
 
