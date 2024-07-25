@@ -4,7 +4,7 @@ import Foundation
 public class Remote {
     private let urlSession: URLSessionProtocol
 
-    init(urlSession: URLSessionProtocol = URLSession.shared) {
+    public init(urlSession: URLSessionProtocol = URLSession.shared) {
         self.urlSession = urlSession
     }
 
