@@ -5,23 +5,15 @@ import Foundation
 //
 public struct EndpointConstants {
     
-    private static var shared: EndpointConstants!
-    let engineBaseURL: NSString
-    let platformName: String
-    
+    public static var shared = EndpointConstants()
 
-    /// Initializes the Endpoint Constants
-    ///
-    public static func initializeSettings(engineBaseURL: String, platformName: String) {
-        assert(shared == nil, "Already initialized!")
-        shared = EndpointConstants(engineBaseURL: engineBaseURL as NSString, platformName: platformName)
-    }
+    public var engineBaseURL: NSString = "https://app.simplenote.com"
     
-    /// Indicates if the Endpoint Constants have been already Init'ed
-    ///
-    public static var isInitialized: Bool {
-        shared != nil
-    }
+#if os(iOS)
+    public var platformName: String = "iOS"
+#else
+    public var platformName: String = "macOS"
+#endif
 }
 
 

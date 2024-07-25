@@ -8,10 +8,6 @@ class LoginRemoteTests: XCTestCase {
     private lazy var urlSession = MockURLSession()
     private lazy var loginRemote = LoginRemote(urlSession: urlSession)
 
-    override func setUp() async throws {
-        MockEndpointConstants.setup()
-    }
-
     func testLoginRequestFailsWhenStatusCodeIs4xxOr5xx() async {
         let statusCode = Int.random(in: 400..<600)        
         mockSessionResponse(statusCode: statusCode)

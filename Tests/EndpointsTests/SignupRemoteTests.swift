@@ -8,11 +8,6 @@ class SignupRemoteTests: XCTestCase {
     private lazy var urlSession = MockURLSession()
     private lazy var signupRemote = SignupRemote(urlSession: urlSession)
 
-    
-    override func setUp() async throws {
-        MockEndpointConstants.setup()
-    }
-
     func testSuccessWhenStatusCodeIs2xx() {
         verifySignupSucceeds(withStatusCode: Int.random(in: 200..<300), email: "email@gmail.com", expectedSuccess: Result.success(nil))
     }

@@ -7,10 +7,6 @@ import XCTest
 class AccountVerificationRemoteTests: XCTestCase {
     private lazy var urlSession = MockURLSession()
     private lazy var remote = AccountRemote(urlSession: urlSession)
-
-    override func setUp() async throws {
-        MockEndpointConstants.setup()
-    }
     
     func testSuccessWhenStatusCodeIs2xx() {
         for _ in 0..<5 {
