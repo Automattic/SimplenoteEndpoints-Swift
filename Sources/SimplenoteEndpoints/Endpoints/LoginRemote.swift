@@ -22,6 +22,11 @@ public class LoginRemote: Remote {
 public struct LoginConfirmationResponse: Codable, Equatable {
     public let username: String
     public let syncToken: String
+    
+    public init(username: String, syncToken: String) {
+        self.username = username
+        self.syncToken = syncToken
+    }
 }
 
 
