@@ -19,7 +19,7 @@ public class LoginRemote: Remote {
 
 // MARK: - LoginConfirmationResponse
 //
-public struct LoginConfirmationResponse: Decodable {
+public struct LoginConfirmationResponse: Codable, Equatable {
     public let username: String
     public let syncToken: String
 }

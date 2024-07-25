@@ -16,6 +16,12 @@ struct EndpointConstants {
         assert(shared == nil, "Already initialized!")
         shared = EndpointConstants(engineBaseURL: engineBaseURL as NSString, platformName: platformName)
     }
+    
+    /// Indicates if the Endpoint Constants have been already Init'ed
+    ///
+    public static var isInitialized: Bool {
+        shared != nil
+    }
 }
 
 
