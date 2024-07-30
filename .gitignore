@@ -52,3 +52,6 @@ default.profraw
 # Everything without a .enc extension is ignored
 .configure-files/*
 !.configure-files/*.enc
+
+# Swift Package Manger uses this folder for CLI operations
+.build
